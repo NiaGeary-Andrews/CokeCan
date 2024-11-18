@@ -211,7 +211,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Challenge1
+          m_StringArgument: Challenge2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &27779149
@@ -616,7 +616,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Challenge1
+          m_StringArgument: Challenge5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &179595949
@@ -965,7 +965,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Challenge1
+          m_StringArgument: Challenge3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &601594258
@@ -1257,7 +1257,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Challenge1
+          m_StringArgument: Challenge4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &846795372
@@ -2117,7 +2117,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Challenge1
+          m_StringArgument: Challenge6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1599483951

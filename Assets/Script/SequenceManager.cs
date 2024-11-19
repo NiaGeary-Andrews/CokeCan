@@ -44,6 +44,8 @@ public class SequenceManager : MonoBehaviour
         // Update the corresponding image in the strip
         images[numButtonPressed - 1].color = buttonColor;
 
+        AudioManager.PlaySound(SoundType.BUTTONCLICK);
+
         // Check if the input matches the correct code
         if (numButtonPressed == correctCode.Length)
         {
@@ -56,6 +58,7 @@ public class SequenceManager : MonoBehaviour
                 // If incorrect, reset after a delay
                 Invoke("ResetCode", 1f);
                 outputText.text = "INCORRECT, Try again";
+                AudioManager.PlaySound(SoundType.INCORRECT);
             }
         }
     }
@@ -65,7 +68,7 @@ public class SequenceManager : MonoBehaviour
     {
         Debug.Log("Code Correct! You unlocked it!");
         outputText.text = "CORRECT, The number you need is 8";
-        // Additional unlock behavior here
+        AudioManager.PlaySound(SoundType.UNLOCK);
     }
 
     // Function to reset the input code and images
@@ -73,7 +76,7 @@ public class SequenceManager : MonoBehaviour
     {
         inputCode = "";
         numButtonPressed = 0;
-        outputText.text = ""; // Clear the displayed status
+        outputText.text = "Enter in the four colour code"; // Clear the displayed status
 
         // Reset all images in the strip to white
         foreach (Image img in images)
@@ -82,5 +85,6 @@ public class SequenceManager : MonoBehaviour
         }
 
         Debug.Log("Code reset");
+        AudioManager.PlaySound(SoundType.RESTART);
     }
 }

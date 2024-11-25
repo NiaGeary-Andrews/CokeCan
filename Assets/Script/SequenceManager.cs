@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; // For UI elements like Buttons, Text
-using TMPro; // For TextMeshPro
+using UnityEngine.UI;
+using TMPro;
 
 public class SequenceManager : MonoBehaviour
 {
@@ -14,17 +14,12 @@ public class SequenceManager : MonoBehaviour
 
     void Start()
     {
-        // Add listeners to each button to call the appropriate function when clicked
         foreach (Button btn in numberButtons)
         {
             btn.onClick.AddListener(() => OnNumberButtonPressed(btn));
         }
-
-        // Add listener to the reset button
         resetButton.onClick.AddListener(ResetCode);
     }
-
-    // Called when a number button is pressed
     void OnNumberButtonPressed(Button clickedButton)
     {
         if (numButtonPressed >= images.Length)
@@ -38,7 +33,6 @@ public class SequenceManager : MonoBehaviour
         string buttonPressed = clickedButton.name.Replace("Button", "");
         inputCode += buttonPressed;
 
-        // Get the button's color
         Color buttonColor = clickedButton.GetComponent<Image>().color;
 
         // Update the corresponding image in the strip
@@ -46,16 +40,14 @@ public class SequenceManager : MonoBehaviour
 
         AudioManager.PlaySound(SoundType.BUTTONCLICK);
 
-        // Check if the input matches the correct code
         if (numButtonPressed == correctCode.Length)
         {
             if (inputCode == correctCode)
             {
-                Unlock(); // Unlock if the code is correct
+                Unlock();
             }
             else
             {
-                // If incorrect, reset after a delay
                 Invoke("ResetCode", 1f);
                 outputText.text = "INCORRECT, Try again";
                 AudioManager.PlaySound(SoundType.INCORRECT);
@@ -63,7 +55,6 @@ public class SequenceManager : MonoBehaviour
         }
     }
 
-    // Function to handle unlocking logic
     void Unlock()
     {
         Debug.Log("Code Correct! You unlocked it!");
@@ -71,12 +62,11 @@ public class SequenceManager : MonoBehaviour
         AudioManager.PlaySound(SoundType.UNLOCK);
     }
 
-    // Function to reset the input code and images
     void ResetCode()
     {
         inputCode = "";
         numButtonPressed = 0;
-        outputText.text = "Enter in the four colour code"; // Clear the displayed status
+        outputText.text = "Enter in the four colour code"; 
 
         // Reset all images in the strip to white
         foreach (Image img in images)

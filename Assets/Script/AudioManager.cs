@@ -27,7 +27,6 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-
     public static void PlaySound(SoundType sound, float volume = 1)
     {
         //plays audio file once

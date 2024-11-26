@@ -16,6 +16,7 @@ public class GuessChecker : MonoBehaviour
         if (inputText.ToLower() == answer)
         {
             Debug.Log("Correct!");
+
         }
         else
         {

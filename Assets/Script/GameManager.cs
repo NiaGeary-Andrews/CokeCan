@@ -1,15 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI outputText;   // Text field to show the status
     public Button[] wordButtons;       // Buttons for words
-    public Button resetButton;           // Button to reset the code
-    public string[] correctGroups;        // Correct sequence of button presses
-    private string guessInput = "";       // Code input by the player
+    public Button deselectAllButton;           // Button to reset the code
+    private List<string> selectedButtons = new List<string>();
     public int numButtonPressed = 0;     // Counter for button pressed
+
+
+    // Define the groups
+    private Dictionary<string, List<string>> groups = new Dictionary<string, List<string>>()
+    {
+        { "Group1", new List<string> { "A1", "B4", "D1", "D4" } }, //Elements in periodic table
+        { "Group2", new List<string> { "A3", "B2", "C4", "D3" } }, //Metabolism concepts
+        { "Group3", new List<string> { "C2", "C3", "D2", "A4" } }, //Dynamic Scientific process
+        { "Group4", new List<string> { "C1", "A2", "B1", "B3" } } //Biochemical Terms
+    };
 
     void Start()
     {
@@ -17,65 +27,68 @@ public class GameManager : MonoBehaviour
         {
             btn.onClick.AddListener(() => OnNumberButtonPressed(btn));
         }
-        resetButton.onClick.AddListener(ResetCode);
+        deselectAllButton.onClick.AddListener(ResetSelection);
     }
     void OnNumberButtonPressed(Button clickedButton)
     {
-        if (numButtonPressed >= 4)
+        string buttonId = clickedButton.name; // Ensure each button's name matches its group ID
+
+        if (selectedButtons.Contains(buttonId))
         {
-            return; // Prevent further input if 4 buttons have already been pressed
+            // If already selected, deselect it
+            selectedButtons.Remove(buttonId);
+            Debug.Log($"Deselected {buttonId}");
+        }
+        else
+        {
+            // Add to selection if not already selected
+            selectedButtons.Add(buttonId);
+            Debug.Log($"Selected {buttonId}");
         }
 
-        numButtonPressed++;
-
-        // Append the number based on button name (e.g., "Button1" -> "1")
-        string buttonPressed = clickedButton.name.Replace("Button", "");
-        guessInput += buttonPressed;
-
-        Color buttonColor = clickedButton.GetComponent<Image>().color;
-
-        AudioManager.PlaySound(SoundType.BUTTONCLICK);
-
-        //if (numButtonPressed == correctCode.Length)
-        //{
-        //    // Here is where the submit button becomes active and you can submit your guess
-
-
-
-        //    //if (inputCode == correctCode)
-        //    //{
-        //    //    Unlock();
-        //    //}
-        //    //else
-        //    //{
-        //    //    Invoke("ResetCode", 1f);
-        //    //    outputText.text = "INCORRECT, Try again";
-        //    //    AudioManager.PlaySound(SoundType.INCORRECT);
-        //    //}
-        //}
+        // Check if 4 buttons are selected
+        if (selectedButtons.Count == 4)
+        {
+            CheckGroup();
+        }
     }
 
-    void Unlock()
+    void Submit()
     {
-        Debug.Log("Code Correct! You unlocked it!");
-        outputText.text = "CORRECT, The number you need is 8";
-        AudioManager.PlaySound(SoundType.UNLOCK);
+       
     }
 
-    void ResetCode()
+    void CheckGroup()
     {
-        //inputCode = "";
-        //numButtonPressed = 0;
-        //outputText.text = "Enter in the four colour code";
+        // Check if the selected buttons form a valid group
+        foreach (var group in groups)
+        {
+            if (IsMatchingGroup(group.Value))
+            {
+                Debug.Log($"Correct! These buttons form {group.Key}");
+                ResetSelection();
+                return;
+            }
+        }
 
-        //// Reset all images in the strip to white
-        //foreach (Image img in images)
-        //{
-        //    img.color = Color.white;
-        //}
+        Debug.Log("Incorrect group! Try again.");
+        ResetSelection();
+    }
 
-        //Debug.Log("Code reset");
-        //AudioManager.PlaySound(SoundType.RESTART);
+    bool IsMatchingGroup(List<string> group)
+    {
+        // Check if all selected buttons are in the same group
+        foreach (string buttonId in selectedButtons)
+        {
+            if (!group.Contains(buttonId))
+                return false;
+        }
+        return true;
+    }
+
+    void ResetSelection()
+    {
+        selectedButtons.Clear();
     }
 
 }

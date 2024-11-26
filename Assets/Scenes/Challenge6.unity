@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 338792235}
   - component: {fileID: 338792234}
   m_Layer: 5
-  m_Name: Button8
+  m_Name: B4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 456502825}
   - component: {fileID: 456502824}
   m_Layer: 5
-  m_Name: Button3
+  m_Name: A3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1116,7 +1116,7 @@ GameObject:
   - component: {fileID: 479795049}
   - component: {fileID: 479795048}
   m_Layer: 5
-  m_Name: Button14
+  m_Name: D2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1373,7 +1373,7 @@ GameObject:
   - component: {fileID: 544841039}
   - component: {fileID: 544841038}
   m_Layer: 5
-  m_Name: Button13
+  m_Name: D1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1674,7 +1674,7 @@ GameObject:
   - component: {fileID: 629250063}
   - component: {fileID: 629250062}
   m_Layer: 5
-  m_Name: Button1
+  m_Name: A1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2123,7 +2123,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.65
+  m_fontSize: 41.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2188,7 +2188,7 @@ GameObject:
   - component: {fileID: 757838668}
   - component: {fileID: 757838667}
   m_Layer: 5
-  m_Name: Button9
+  m_Name: C1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2932,7 +2932,7 @@ GameObject:
   - component: {fileID: 943343264}
   - component: {fileID: 943343263}
   m_Layer: 5
-  m_Name: Button6
+  m_Name: B2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,7 +3191,7 @@ GameObject:
   - component: {fileID: 973344383}
   - component: {fileID: 973344382}
   m_Layer: 5
-  m_Name: Button10
+  m_Name: C2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3484,8 +3484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 30}
-  m_SizeDelta: {x: 0, y: -60}
+  m_AnchoredPosition: {x: 0, y: 20}
+  m_SizeDelta: {x: -120, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1055364019
 MonoBehaviour:
@@ -3660,7 +3660,7 @@ GameObject:
   - component: {fileID: 1114248241}
   - component: {fileID: 1114248240}
   m_Layer: 5
-  m_Name: Button5
+  m_Name: B1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3917,7 +3917,7 @@ GameObject:
   - component: {fileID: 1315120328}
   - component: {fileID: 1315120327}
   m_Layer: 5
-  m_Name: Button7
+  m_Name: B3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4038,7 +4038,7 @@ GameObject:
   - component: {fileID: 1408941929}
   - component: {fileID: 1408941928}
   m_Layer: 5
-  m_Name: Button15
+  m_Name: D3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4159,7 +4159,7 @@ GameObject:
   - component: {fileID: 1420493403}
   - component: {fileID: 1420493402}
   m_Layer: 5
-  m_Name: Button2
+  m_Name: A2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4304,7 +4304,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 14}
-  m_SizeDelta: {x: 0, y: 100}
+  m_SizeDelta: {x: 0, y: 73.5224}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1431100644
 MonoBehaviour:
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 100}
+  m_CellSize: {x: 150, y: 60}
   m_Spacing: {x: 50, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4479,7 +4479,7 @@ GameObject:
   - component: {fileID: 1577904445}
   - component: {fileID: 1577904444}
   m_Layer: 5
-  m_Name: Button11
+  m_Name: C3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4600,7 +4600,7 @@ GameObject:
   - component: {fileID: 1580795460}
   - component: {fileID: 1580795459}
   m_Layer: 5
-  m_Name: Button4
+  m_Name: A4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4990,7 +4990,7 @@ GameObject:
   - component: {fileID: 1684021223}
   - component: {fileID: 1684021222}
   m_Layer: 5
-  m_Name: Button12
+  m_Name: C4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5383,7 +5383,7 @@ GameObject:
   - component: {fileID: 1829972530}
   - component: {fileID: 1829972529}
   m_Layer: 5
-  m_Name: Button16
+  m_Name: D4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5521,11 +5521,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outputText: {fileID: 0}
-  wordButtons: []
-  resetButton: {fileID: 0}
-  correctCode: 1234
+  wordButtons:
+  - {fileID: 629250062}
+  - {fileID: 1420493402}
+  - {fileID: 456502824}
+  - {fileID: 1580795459}
+  - {fileID: 1114248240}
+  - {fileID: 943343263}
+  - {fileID: 1315120327}
+  - {fileID: 338792234}
+  - {fileID: 757838667}
+  - {fileID: 973344382}
+  - {fileID: 1577904444}
+  - {fileID: 1684021222}
+  - {fileID: 544841038}
+  - {fileID: 479795048}
+  - {fileID: 1408941928}
+  - {fileID: 1829972529}
+  deselectAllButton: {fileID: 1886036993}
   numButtonPressed: 0
-  images: []
 --- !u!4 &1871902392
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GuessChecker : MonoBehaviour
 {
     public TMP_InputField guess;
-    public string answer = "hehe";
+    public string answer = "dishwasher";
     public Button submitButton;
 
     public void OnSubmitted()

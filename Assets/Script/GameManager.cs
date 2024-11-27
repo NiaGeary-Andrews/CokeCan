@@ -140,7 +140,7 @@ public class GameManager : MonoBehaviour
         string hexColor = ColorUtility.ToHtmlStringRGB(solvedGroupColor);
 
         // Display the solved group name in the output text with Rich Text coloring
-        outputText.text += $"\n<b><color=#{hexColor}>• {solvedGroupName}</color></b>";
+        outputText.text += $"<b><color=#{hexColor}>• {solvedGroupName}</color></b>\n";
 
 
         ResetSelection(); // Clear the selection list for the next group

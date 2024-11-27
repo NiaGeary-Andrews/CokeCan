@@ -5,8 +5,10 @@ using UnityEngine.UI;
 public class GuessChecker : MonoBehaviour
 {
     public TMP_InputField guess;
-    public string answer = "dishwasher";
+    private string answer = "dishwasher";
     public Button submitButton;
+    public Button playSoundButton;
+    public TextMeshProUGUI outputText;
 
     public void OnSubmitted()
     {
@@ -16,11 +18,14 @@ public class GuessChecker : MonoBehaviour
         if (inputText.ToLower() == answer)
         {
             Debug.Log("Correct!");
-
+            outputText.text = "Correct! The number you need is 8!";
+            guess.interactable = false;
+            submitButton.interactable = false;
         }
         else
         {
             Debug.Log("Incorrect");
+            outputText.text = "Incorrect! Try again!";
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI outputText;   // Text field to show the status
+    public TextMeshProUGUI titleText;   // Text field to show the completion
     public Button[] wordButtons;       // Buttons for words
     public Button deselectAllButton;           // Button to reset the code
     public Button submitButton;
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     private Color defaultColor = new Color32 (162, 155, 254, 255); // Default button color
     private Color selectedColor = Color.gray; // Highlight color for selected buttons
     private bool isCorrectGroup;
+    private int numCorrectGroups;
 
 
     // Define the groups
@@ -121,6 +123,7 @@ public class GameManager : MonoBehaviour
         // Get the color for the group
         Color solvedGroupColor = groupColors[groupName];
         string solvedGroupName = groupNames[groupName];
+        numCorrectGroups += 1;
 
         foreach (string buttonId in selectedButtons)
         {
@@ -141,6 +144,10 @@ public class GameManager : MonoBehaviour
 
         // Display the solved group name in the output text with Rich Text coloring
         outputText.text += $"<b><color=#{hexColor}>• {solvedGroupName}</color></b>\n";
+
+        if (numCorrectGroups == 4) {
+            titleText.text = "Congratulations, the number you need is 8";
+        }
 
 
         ResetSelection(); // Clear the selection list for the next group

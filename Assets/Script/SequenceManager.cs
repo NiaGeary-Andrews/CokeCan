@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SequenceManager : MonoBehaviour
 {
@@ -60,6 +61,14 @@ public class SequenceManager : MonoBehaviour
         Debug.Log("Code Correct! You unlocked it!");
         outputText.text = "CORRECT, The number you need is 8";
         AudioManager.PlaySound(SoundType.UNLOCK);
+        Debug.Log("Before Scene Manager");
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            Debug.Log("Here");
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 
     void ResetCode()

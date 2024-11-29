@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GuessChecker : MonoBehaviour
 {
     public TMP_InputField guess;
-    private string answer = "dishwasher";
+    public string answer;
     public Button submitButton;
     public Button playSoundButton;
     public TextMeshProUGUI outputText;

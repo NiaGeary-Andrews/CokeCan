@@ -59,7 +59,7 @@ public class SequenceManager : MonoBehaviour
     void Unlock()
     {
         Debug.Log("Code Correct! You unlocked it!");
-        outputText.text = "CORRECT, The number you need is 8";
+        outputText.text = "CORRECT, The number word you need is ******";
         AudioManager.PlaySound(SoundType.UNLOCK);
         Debug.Log("Before Scene Manager");
         if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))

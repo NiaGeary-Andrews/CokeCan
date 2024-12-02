@@ -1234,8 +1234,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GuessChecker, Assembly-CSharp
+      - m_Target: {fileID: 599821416}
+        m_TargetAssemblyTypeName: MultiAnswerManager, Assembly-CSharp
         m_MethodName: OnSubmitted
         m_Mode: 1
         m_Arguments:
@@ -1918,6 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 599821415}
+  - component: {fileID: 599821416}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1940,6 +1941,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &599821416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599821413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be21a18160228e40834fa8ecc0c026c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guess1: {fileID: 496804331}
+  guess2: {fileID: 566685499}
+  guess3: {fileID: 167364418}
+  guess4: {fileID: 2048755405}
+  guess5: {fileID: 971410525}
+  answer1: A
+  answer2: B
+  answer3: C
+  answer4: D
+  answer5: A
+  submitButton: {fileID: 498713616}
+  outputText: {fileID: 1672498604}
 --- !u!1 &649842047
 GameObject:
   m_ObjectHideFlags: 0

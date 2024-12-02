@@ -104,8 +104,21 @@ public class GameManager : MonoBehaviour
 
         isCorrectGroup = false;
 
-        Debug.Log("Incorrect group! Try again.");
-        AudioManager.PlaySound(SoundType.INCORRECT);
+        // If no complete group is found, check for partial matches (3 in a group)
+        if (CheckPartialGroup())
+        {
+            Debug.Log("You have 3 correct buttons from a group!");
+            titleText.text = "You have 3 correct buttons from a group! Keep going!";
+            //AudioManager.PlaySound(SoundType.PARTIAL); // Optional sound for partial success
+        }
+        else
+        {
+            Debug.Log("Incorrect group! Try again.");
+            titleText.text = "Incorrect group! Try again.";
+            AudioManager.PlaySound(SoundType.INCORRECT);
+        }
+
+        // Reset selection since no complete match was found
         ResetSelection();
     }
 
@@ -145,6 +158,7 @@ public class GameManager : MonoBehaviour
 
         // Display the solved group name in the output text with Rich Text coloring
         outputText.text += $"<b><color=#{hexColor}>• {solvedGroupName}</color></b>\n";
+        titleText.text = "Correct!";
 
         if (numCorrectGroups == 4) {
             titleText.text = "Congratulations, the number you need is 8";
@@ -169,6 +183,30 @@ public class GameManager : MonoBehaviour
         }
         selectedButtons.Clear();
         isCorrectGroup= false;
+    }
+
+    bool CheckPartialGroup()
+    {
+        foreach (var group in groups)
+        {
+            int matchingCount = 0;
+
+            foreach (string buttonId in selectedButtons)
+            {
+                if (group.Value.Contains(buttonId))
+                {
+                    matchingCount++;
+                }
+            }
+
+            if (matchingCount == 3)
+            {
+                // Found 3 matching buttons in the same group
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }

@@ -37,6 +37,7 @@ public class MultiAnswerManager : MonoBehaviour
         {
             Debug.Log("Correct!");
             outputText.text = "Correct! The number you need is 8!";
+            AudioManager.PlaySound(SoundType.UNLOCK);
 
             // Disable interaction with inputs and the submit button
             guess1.interactable = false;
@@ -46,18 +47,17 @@ public class MultiAnswerManager : MonoBehaviour
             guess5.interactable = false;
             submitButton.interactable = false;
 
-            // Unlock levels and save progress
-            if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-            {
-                PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-                PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
-                PlayerPrefs.Save();
-            }
         }
         else
         {
             Debug.Log("Incorrect");
             outputText.text = "Incorrect! Try again!";
+            guess1.text = "";
+            guess2.text = "";
+            guess3.text = "";
+            guess4.text = "";
+            guess5.text = "";
+            AudioManager.PlaySound(SoundType.INCORRECT);
         }
     }
 }

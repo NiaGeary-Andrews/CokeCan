@@ -105,6 +105,7 @@ public class GameManager : MonoBehaviour
         isCorrectGroup = false;
 
         Debug.Log("Incorrect group! Try again.");
+        AudioManager.PlaySound(SoundType.INCORRECT);
         ResetSelection();
     }
 
@@ -149,7 +150,7 @@ public class GameManager : MonoBehaviour
             titleText.text = "Congratulations, the number you need is 8";
         }
 
-
+        AudioManager.PlaySound(SoundType.UNLOCK);
         ResetSelection(); // Clear the selection list for the next group
     }
 

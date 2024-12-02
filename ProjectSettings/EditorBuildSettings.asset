@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Challenge5.unity
     guid: 4305a98a2c9ccd04d83dd4483bcaadbc
   - enabled: 1
-    path: Assets/Scenes/Challenge6.unity
+    path: Assets/Scenes/Challenge4.unity
     guid: 3d50c2af81079aa408439f914269af2a
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3c2631a5c6d087a48850b0f7a0405d84, type: 2}

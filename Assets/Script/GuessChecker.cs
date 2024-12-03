@@ -23,6 +23,7 @@ public class GuessChecker : MonoBehaviour
             guess.interactable = false;
             submitButton.interactable = false;
             AudioManager.PlaySound(SoundType.UNLOCK);
+            LevelStateManager.LockLevel(SceneManager.GetActiveScene().buildIndex -1);
         }
         else
         {

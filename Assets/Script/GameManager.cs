@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -161,7 +162,9 @@ public class GameManager : MonoBehaviour
         titleText.text = "Correct!";
 
         if (numCorrectGroups == 4) {
-            titleText.text = "Congratulations, the number you need is 8";
+            titleText.text = "Well done you have unlocked room 6!";
+            LevelStateManager.LockLevel(SceneManager.GetActiveScene().buildIndex - 1);
+            LevelStateManager.UnlockLevel(5);
         }
 
         AudioManager.PlaySound(SoundType.UNLOCK);

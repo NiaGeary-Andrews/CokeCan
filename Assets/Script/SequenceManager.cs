@@ -61,6 +61,8 @@ public class SequenceManager : MonoBehaviour
         Debug.Log("Code Correct! You unlocked it!");
         outputText.text = "CORRECT, The number word you need is ******";
         AudioManager.PlaySound(SoundType.UNLOCK);
+        // Example: Lock this level when complete
+        LevelStateManager.LockLevel(0);
     }
 
     void ResetCode()

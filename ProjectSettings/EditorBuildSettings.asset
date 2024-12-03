@@ -13,20 +13,23 @@ EditorBuildSettings:
     guid: ae61123e6bbb05a4984ad9ccfe27f3f1
   - enabled: 1
     path: Assets/Scenes/Challenge2.unity
-    guid: c3a7c0bc12c2ecf4c8aabf86dfc90969
+    guid: 0ff162e629f572347ab5e81996f6d0ae
   - enabled: 1
     path: Assets/Scenes/Challenge3.unity
     guid: c07e83ce38487774fa36049620089f61
   - enabled: 1
     path: Assets/Scenes/Challenge4.unity
-    guid: 59a5fac46c8fa104ca8e7b57fb86fbdd
+    guid: 3d50c2af81079aa408439f914269af2a
   - enabled: 1
     path: Assets/Scenes/Challenge5.unity
     guid: 4305a98a2c9ccd04d83dd4483bcaadbc
   - enabled: 1
-    path: Assets/Scenes/Challenge4.unity
-    guid: 3d50c2af81079aa408439f914269af2a
+    path: Assets/Scenes/Challenge6.unity
+    guid: 51b71bddc9f94214b9389cba2d338619
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: bf0b15424eadb0a4b9968635f6176cff, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 9d49f1acf0ce7304c84ee59d84f61969, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: d52e56819f5326e48b043ea4e6e6bdd1, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3c2631a5c6d087a48850b0f7a0405d84, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

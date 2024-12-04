@@ -163,6 +163,8 @@ public class GameManager : MonoBehaviour
 
         if (numCorrectGroups == 4) {
             titleText.text = "Well done you have unlocked room 6!";
+            submitButton.interactable = false;
+            deselectAllButton.interactable = false;
             LevelStateManager.LockLevel(SceneManager.GetActiveScene().buildIndex - 1);
             LevelStateManager.UnlockLevel(5);
         }

@@ -17,7 +17,7 @@ public class LevelMenu : MonoBehaviour
     private void Awake()
     {
         //DELETE ALL PLAYER PREFS
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         panel1.gameObject.SetActive(false);
         ButtonsToArray();
         ApplyStatesAndTextsToButtons();

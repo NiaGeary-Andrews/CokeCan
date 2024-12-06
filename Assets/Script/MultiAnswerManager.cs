@@ -90,6 +90,8 @@ public class MultiAnswerManager : MonoBehaviour
             {
                 outputText.text = "Correct!";
                 LevelStateManager.LockLevel(SceneManager.GetActiveScene().buildIndex - 1);
+                submitButton.interactable = false;
+                guess6.interactable = false;
             }
         }
 

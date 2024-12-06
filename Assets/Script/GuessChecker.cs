@@ -19,7 +19,7 @@ public class GuessChecker : MonoBehaviour
         if (inputText.ToLower() == answer)
         {
             Debug.Log("Correct!");
-            outputText.text = "Correct! The number you need is 8!";
+            outputText.text = "Correct!";
             guess.interactable = false;
             submitButton.interactable = false;
             AudioManager.PlaySound(SoundType.UNLOCK);

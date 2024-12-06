@@ -58,7 +58,7 @@ public class SequenceManager : MonoBehaviour
     void Unlock()
     {
         Debug.Log("Code Correct! You unlocked it!");
-        outputText.text = "CORRECT, The number word you need is ******";
+        outputText.text = "CORRECT!";
         AudioManager.PlaySound(SoundType.UNLOCK);
         resetButton.interactable = false;
         // Example: Lock this level when complete

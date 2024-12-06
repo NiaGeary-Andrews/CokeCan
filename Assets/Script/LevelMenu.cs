@@ -11,13 +11,13 @@ public class LevelMenu : MonoBehaviour
     public RectTransform panel1;
 
     // Texts for unlocked and locked states
-    public string[] unlockedTexts = { "Challenge1", "Challenge2", "Challenge3", "Challenge4", "Challenge5", "Challenge6" };
-    public string[] lockedTexts = { "Word", "0", "0", "-", "0", "Challenge6" };
+    public string[] unlockedTexts = { "Challenge 1", "Challenge 2", "Challenge 3", "Challenge 4", "Challenge 5", "Challenge 6" };
+    public string[] lockedTexts = { "Word", "0", "0", "-", "0", "Challenge 6" };
 
     private void Awake()
     {
         //DELETE ALL PLAYER PREFS
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         panel1.gameObject.SetActive(false);
         ButtonsToArray();
         ApplyStatesAndTextsToButtons();

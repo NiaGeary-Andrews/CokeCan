@@ -12,7 +12,7 @@ public class LevelMenu : MonoBehaviour
 
     // Texts for unlocked and locked states
     public string[] unlockedTexts = { "Challenge 1", "Challenge 2", "Challenge 3", "Challenge 4", "Challenge 5", "Challenge 6" };
-    public string[] lockedTexts = { "Word", "0", "0", "-", "0", "Challenge 6" };
+    public string[] lockedTexts = { "Word", "0", "8", "-", "3", "1" };
 
     private void Awake()
     {

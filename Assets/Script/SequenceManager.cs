@@ -7,7 +7,7 @@ public class SequenceManager : MonoBehaviour
     public TextMeshProUGUI outputText;   // Text field to show the status
     public Button[] numberButtons;       // Buttons for colors
     public Button resetButton;           // Button to reset the code
-    public string correctCode = "521";  // Correct sequence of button presses
+    public string correctCode = "123";  // Correct sequence of button presses
     private string inputCode = "";       // Code input by the player
     public int numButtonPressed = 0;     // Counter for button presses
     public Image[] images;               // Strip of images to show pressed colors

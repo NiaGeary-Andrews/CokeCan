@@ -3048,7 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guess: {fileID: 781497070}
-  answer: elf
+  answer: 8
   submitButton: {fileID: 34626594}
   playSoundButton: {fileID: 0}
   outputText: {fileID: 1697020897}

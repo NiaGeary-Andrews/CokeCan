@@ -64,6 +64,7 @@ public class MultiAnswerManager : MonoBehaviour
 
                 panel1.gameObject.SetActive(false);
                 panel2.gameObject.SetActive(true);
+                firstStage = false;
 
             }
             else
@@ -78,7 +79,7 @@ public class MultiAnswerManager : MonoBehaviour
                 AudioManager.PlaySound(SoundType.INCORRECT);
             }
 
-            firstStage = false;
+
         }
 
         else
@@ -92,6 +93,11 @@ public class MultiAnswerManager : MonoBehaviour
                 LevelStateManager.LockLevel(SceneManager.GetActiveScene().buildIndex - 1);
                 submitButton.interactable = false;
                 guess6.interactable = false;
+            }
+            else
+            {
+                outputText.text = "Incorrect!";
+                AudioManager.PlaySound(SoundType.INCORRECT);
             }
         }
 

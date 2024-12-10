@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("You have 3 correct buttons from a group!");
             titleText.text = "You have 3 correct buttons from a group! Keep going!";
             //AudioManager.PlaySound(SoundType.PARTIAL); // Optional sound for partial success
+            AudioManager.PlaySound(SoundType.INCORRECT);
         }
         else
         {

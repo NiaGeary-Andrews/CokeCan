@@ -2119,7 +2119,7 @@ MonoBehaviour:
   panel1: {fileID: 1263590491}
   panel2: {fileID: 1971525841}
   submitButton: {fileID: 498713616}
-  outputText: {fileID: 1672498604}
+  outputText: {fileID: 1948928341}
   firstStage: 1
 --- !u!1 &649842047
 GameObject:

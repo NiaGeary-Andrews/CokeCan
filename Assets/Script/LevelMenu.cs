@@ -107,6 +107,19 @@ public class LevelMenu : MonoBehaviour
         }
         return true;
     }
+
+    public void resetChallenges()
+    {
+        PlayerPrefs.DeleteAll();
+        panel1.gameObject.SetActive(false);
+        ButtonsToArray();
+        ApplyStatesAndTextsToButtons();
+
+        if (isCompleted())
+        {
+            panel1.gameObject.SetActive(true);
+        }
+    }
 }
 
 

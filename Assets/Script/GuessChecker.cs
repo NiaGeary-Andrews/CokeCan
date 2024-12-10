@@ -30,6 +30,7 @@ public class GuessChecker : MonoBehaviour
             Debug.Log("Incorrect");
             outputText.text = "Incorrect! Try again!";
             AudioManager.PlaySound(SoundType.INCORRECT);
+            //playSoundButton.interactable = true;
         }
     }
 }

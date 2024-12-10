@@ -6,7 +6,7 @@ public enum SoundType
     UNLOCK,
     INCORRECT,
     RESTART,
-    BACKGROUNDMUSIC
+    GUESS
 }
 
 

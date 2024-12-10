@@ -456,6 +456,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5175290229943248690, guid: 575a827bb4c4e69418c8f3059b8186c6, type: 3}
+      propertyPath: soundList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5175290229943248690, guid: 575a827bb4c4e69418c8f3059b8186c6, type: 3}
+      propertyPath: 'soundList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 21bb740990969a94d823c97cbf206a93, type: 3}
+    - target: {fileID: 5175290229943248690, guid: 575a827bb4c4e69418c8f3059b8186c6, type: 3}
+      propertyPath: 'soundList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 21bb740990969a94d823c97cbf206a93, type: 3}
     - target: {fileID: 6227068720206627944, guid: 575a827bb4c4e69418c8f3059b8186c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 573.7806
@@ -1340,7 +1352,7 @@ MonoBehaviour:
   guess: {fileID: 496804331}
   answer: dishwasher
   submitButton: {fileID: 498713616}
-  playSoundButton: {fileID: 0}
+  playSoundButton: {fileID: 961133421}
   outputText: {fileID: 1672498604}
 --- !u!4 &599821415
 Transform:
@@ -2013,13 +2025,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1899169365}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 21bb740990969a94d823c97cbf206a93, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 961133421}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3408,6 +3432,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884919691}
   m_CullTransparentMesh: 1
+--- !u!82 &1899169365 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6109794201411528705, guid: 575a827bb4c4e69418c8f3059b8186c6, type: 3}
+  m_PrefabInstance: {fileID: 317579261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1905125783
 GameObject:
   m_ObjectHideFlags: 0
@@ -3517,7 +3546,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0005187988, y: -25}
+  m_AnchoredPosition: {x: 0.00048828125, y: -25}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1948928341

@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 {
     { "Group1", "Characters from christmas movies" }, // Characters from christmas movies
     { "Group2", "Mr _____" },  // Mr ___
-    { "Group3", "Feel around for" },   // Dynamic scientific processes
+    { "Group3", "Feel around for" },   // Feel around for
     { "Group4", "Words associated with snow or winter" } //Words associated with snow or winter
 };
 

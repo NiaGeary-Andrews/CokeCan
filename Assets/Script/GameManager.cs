@@ -23,27 +23,27 @@ public class GameManager : MonoBehaviour
     // Define the groups
     private Dictionary<string, List<string>> groups = new Dictionary<string, List<string>>()
     {
-        { "Group1", new List<string> { "A1", "B4", "D1", "D4" } }, //Elements in periodic table - YELLOW
-        { "Group2", new List<string> { "A3", "B2", "C4", "D3" } }, //Metabolism concepts - GREEN
-        { "Group3", new List<string> { "C2", "C3", "D2", "A4" } }, //Dynamic Scientific process - BLUE
-        { "Group4", new List<string> { "C1", "A2", "B1", "B3" } } //Biochemical Terms - PURPLE
+        { "Group1", new List<string> { "A1", "B4", "D1", "D4" } }, //Characters from christmas movies - YELLOW
+        { "Group2", new List<string> { "A3", "B2", "C4", "D3" } }, //Mr ___ -- GREEN
+        { "Group3", new List<string> { "C2", "C3", "D2", "A4" } }, //Feel around for - BLUE
+        { "Group4", new List<string> { "C1", "A2", "B1", "B3" } } //Words associated with snow or winter - PURPLE
     };
 
     private Dictionary<string, Color> groupColors = new Dictionary<string, Color>()
 {
-    { "Group1", Color.yellow }, // Periodic table
-    { "Group2", Color.green },  // Metabolism concepts
-    { "Group3", Color.blue },   // Dynamic scientific processes
-    { "Group4", new Color(0.5f, 0f, 0.5f) } // Purple for biochemical terms
+    { "Group1", Color.yellow }, // Characters from christmas movies
+    { "Group2", Color.green },  // Mr ___
+    { "Group3", Color.blue },   // Feel around for
+    { "Group4", new Color(0.5f, 0f, 0.5f) } // Words associated with snow or winter
 };
 
 
     private Dictionary<string, string> groupNames = new Dictionary<string, string>()
 {
-    { "Group1", "Elements in the Periodic Table" }, // Periodic table
-    { "Group2", "Concepts in Metabolism" },  // Metabolism concepts
-    { "Group3", "Dynamic Scientific Process" },   // Dynamic scientific processes
-    { "Group4", "Biochemical Terms" } // Purple for biochemical terms
+    { "Group1", "Characters from christmas movies" }, // Characters from christmas movies
+    { "Group2", "Mr _____" },  // Mr ___
+    { "Group3", "Feel around for" },   // Dynamic scientific processes
+    { "Group4", "Words associated with snow or winter" } //Words associated with snow or winter
 };
 
     void Start()
